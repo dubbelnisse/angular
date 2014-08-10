@@ -1,0 +1,119 @@
+@grey: #333;
+@orange: #ffbd09;
+@blue: #6699CC;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:"AvantGarde ExtraLight","Tex Gyre Adventor Regular",Franklin Gothic Book,Arial,Sans-Serif;
+}
+
+.wrapper {
+  position: relative;
+}
+
+p {
+  margin: 0;
+}
+
+.test {
+  background: red !important;
+}
+
+header {
+  background: @grey;
+  text-align: center;
+  padding: 10px 0;
+    img {
+      display: inline-block;
+      width: 100px;
+    }
+}
+
+.questions {
+  min-width: 100%;
+  margin: 0 0 10px 0;
+  font-size: 19px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 10px;
+      &:nth-child(odd) {
+        background: #ccc;
+      }
+    }
+  }
+  .q {
+    background: @orange;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+.thanks {
+  min-width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  p {
+    font-size: 17px;
+    margin: 0 0 20px 0;
+    span {
+      font-weight: bold;
+    }
+  }
+  .back {
+    background: @blue;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+  }
+  img {
+    margin: 10px 0;
+  }
+}
+
+.animate-answer.ng-enter, 
+.animate-answer.ng-leave {
+  -webkit-transition:0.5s linear all;
+  -moz-transition:0.5s linear all;
+  -o-transition:0.5s linear all;
+  transition:0.5s linear all;
+  position:absolute;
+}
+
+//Animate left
+.animate-answer.ng-enter {
+  left:100%;
+}
+.animate-answer.ng-leave,
+.animate-answer.ng-enter.ng-enter-active {
+  left:0;
+}
+.animate-answer.ng-leave.ng-leave-active {
+  left:-100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  padding: 10px 0;
+  .social {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 5px;
+    &.github { background-image: url(../images/github.svg); }
+    &.facebook { background-image: url(../images/facebook.svg); }
+    &.twitter { background-image: url(../images/twitter.svg); }
+    &.instagram { background-image: url(../images/instagram.svg); }
+  }
+}

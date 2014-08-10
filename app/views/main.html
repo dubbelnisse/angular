@@ -1,0 +1,20 @@
+<div ng-switch="moduleState" ng-controller="questionsCtrl">
+
+  <div class="questions animate-answer" ng-switch-when="list">
+    <div class="question" ng-repeat="question in questionsList">
+      <p class="q">{{question.question}}</p>
+      <ul>
+        <li class="alternative" ng-repeat="alternative in question.alternatives" ng-click="showThanks(alternative)">
+          {{$index+1}} - {{alternative}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="thanks animate-answer" ng-switch-when="thanks">
+    <img src="images/check.png">
+    <p><span>{{ selectedAlt }}</span>, that's a great one!</p>
+    <span class="back" ng-click="showList()">Change answer</span>
+  </div>
+
+</div>
